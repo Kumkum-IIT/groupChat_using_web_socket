@@ -1,31 +1,19 @@
 # Group Chat Django
 
-This repository contains a Django project that implements a real-time group chat application using WebSockets with Django Channels. Users can create or join chat rooms and send messages in real-time.
+This project is a real-time group chat application built using Django, Django Channels, and WebSockets. Users can create or join chat rooms and exchange messages instantly.
 
-## Features
-
-- **Real-time Communication**: Users can send and receive messages instantly using WebSockets.
-- **Multiple Chat Rooms**: Users can create or join different chat rooms.
-- **Scalable Architecture**: Built with Django Channels for handling WebSocket connections.
-
-## Requirements
-
-- Python 3.x
-- Django
-- Django Channels
-- Redis (for channel layers)
-
-## Installation
+## Setup Instructions
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/yourusername/group-chat-django.git
    cd group-chat-django
+## Install requiements
+pip install -r requirements.txt
 
-2. Run redis:
-   ``` bash
-   redis-server
+## Run the application using Daphne:
+daphne -b 0.0.0.0 -p 8001 web_socket.asgi:application
+(if server is running on port 8001)
 
 ## Project Structure
 1. views.py: Contains views for creating chat rooms and rendering the chat room page.
